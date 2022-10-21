@@ -1,0 +1,43 @@
+// Functions first
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Required Bootstrap imports
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+// Optional components
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/containers";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/helpers";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/utilities/api";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+@import "fonts";
+@import "variables";
+@import "base";
+
+@import "part/header";
+@import "part/footer";
+
+@import "base/base";
+@import "base/buttons";
+@import "base/checkbox";
+@import "base/inputs";
+@import "base/pagination";
+@import "base/preheader";
+@import "base/switch";
+@import "base/tabs";
+
+@import "components/excursions";
+@import "components/fonts";
+@import "components/main-page";
+@import "components/modal";
+@import "components/reviews";
+@import "components/travel-card";
+
