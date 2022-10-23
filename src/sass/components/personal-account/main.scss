@@ -2,6 +2,20 @@
   background: #f6f6f6;
   padding: 40px 0 80px;
 
+  &-breadcrumbs {
+    font-size: 10px;
+    color: rgba(34, 36, 37, 0.4);
+    text-transform: uppercase;
+    line-height: 2;
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    .breadcrumb {
+      margin-bottom: 0;
+    }
+  }
+
   &__arrow {
     margin: 0 9px;
     width: 6px;
@@ -9,15 +23,6 @@
   }
 
   &__title {
-    &_grey {
-      font-size: 10px;
-      color: rgba(34, 36, 37, 0.4);
-      text-transform: uppercase;
-      line-height: 2;
-      text-align: left;
-      display: flex;
-      align-items: center;
-    }
 
     &_black {
       font-weight: 800;
@@ -28,6 +33,16 @@
     margin-top: 82px;
     display: grid;
     grid-template-columns: minmax(auto, 300px) 1fr;
+  }
+
+  &__stars {
+    img {
+      margin-right: 6px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 
   &-nav {
