@@ -30,17 +30,24 @@
       margin-right: 0;
     }
 
-    &_active {
+    &_active, &:hover, &:focus, &:active {
       background-color: rgb(0, 113, 235);
-      box-shadow: 0px 10px 27.9px 2.1px rgba(0, 113, 235, 0.3);
       color: #ffffff;
+    }
+    &_active {
+      box-shadow: 0px 10px 27.9px 2.1px rgba(0, 113, 235, 0.3);
     }
   }
 
   &__card {
-    height: 562px;
+    min-height: 562px;
+    height: 100%;
     display: grid;
-    grid-auto-rows: 196px 295px 69px;
+    grid-auto-rows: 196px auto 69px;
+
+    .card-body {
+      max-height: 100%;
+    }
   }
 
   &-info {
@@ -98,6 +105,7 @@
     &-info {
       margin: 26px 0 28px;
     }
+
     &__card {
       height: 534px;
       display: grid;
@@ -106,6 +114,7 @@
 
     &-footer {
       padding: 30px 35px;
+
       &__link {
         border-radius: 6px;
         height: 44px;
@@ -121,6 +130,7 @@
         &_blue {
           background-color: rgb(0, 113, 235);
           color: rgb(255, 255, 255);
+
           &:hover, &:focus, &:active {
             color: rgb(255, 255, 255);
             box-shadow: 0px 10px 27.9px 2.1px rgba(0, 113, 235, 0.3);
@@ -130,11 +140,54 @@
         &_grey {
           color: rgb(0, 113, 235);
           background: #f5f9fe;
+
           &:hover, &:focus, &:active {
             color: rgb(0, 113, 235);
             box-shadow: 0px 10px 27.9px 2.1px rgba(0, 113, 235, 0.3);
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .personal-account {
+    &-orders {
+      &-footer {
+        flex-direction: column;
+        padding: 25px 10px;
+      }
+
+      &__card {
+        min-height: 350px;
+        height: 100%;
+        display: grid;
+        grid-auto-rows: 196px auto 88px;
+
+        .card-body {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .personal-account {
+    &-orders {
+      &__links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 29px -2px 25px;
+      }
+
+      &__link {
+        border-radius: 6px;
+        padding: 0 5px;
+        font-size: 10px;
+        line-height: 2;
+        margin: 0 2px;
       }
     }
   }
